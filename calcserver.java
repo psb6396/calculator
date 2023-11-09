@@ -25,9 +25,13 @@ public class calcserver {
             case "*":
                 res = Integer.toString(op1 * op2);
                 break;
-            // case "/":
-            //     res = Integer.toString(op1 / op2);
-            //     break;
+            case "/":
+                if (op2 != 0) {
+                    res = Integer.toString(op1 / op2);
+                } else {
+                    res = "error: division by zero";
+                }
+                break;
             default:
                 res = "error";
         }
